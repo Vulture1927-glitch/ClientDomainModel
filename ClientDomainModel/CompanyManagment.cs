@@ -32,11 +32,15 @@ namespace ClientDomainModel
 
         public void GetSummary(Client client)
         {
-            Console.WriteLine(client.Name);
-            Console.WriteLine(client.Email);
-            Console.WriteLine(client.Id);
-            Console.WriteLine(client.CreatedOn);
-            Console.WriteLine(client.IsActive);
+            Console.WriteLine($"Name:{client.Name}");
+            Console.WriteLine($"Email:{client.Email}");
+            Console.WriteLine($"Id:{client.Id}");
+            Console.WriteLine($"Created on:{client.CreatedOn}");
+            Console.WriteLine($"Active:{client.IsActive}");
+        }
+        public void Deactiveate(Client client)
+        {
+            IsActive = false;
         }
     }
 }
