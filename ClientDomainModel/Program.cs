@@ -1,4 +1,5 @@
 ﻿using ClientDomainModel;
+using CompanyMangementServices;
 public class Program
 {
     static void Main()
