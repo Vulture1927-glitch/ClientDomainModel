@@ -18,7 +18,7 @@ namespace CompanyMangementServices
         {
             if (masterList.ContainsKey(id))
             {
-                return masterList[];
+                return masterList[id];
             }
             else
             {
@@ -27,24 +27,23 @@ namespace CompanyMangementServices
             }
         }
 
-        public void GetAllClients()
+        public List<Client> GetAllClients()
         {
-            foreach (Client client in masterList.Values)
-            {
-                Console.WriteLine(client);
-            }
-
+            return masterList.Values.ToList();
         }
 
-        public void GetActiveClients()
+        public List<Client> GetActiveClients()
         {
+            List<Client> activeClients = new List<Client>();
+
             foreach (Client client in masterList.Values)
             {
                 if (client.IsActive)
                 {
-                    Console.WriteLine(client);
+                    activeClients.Add(client);
                 }
             }
+            return activeClients;
         }
 
 
